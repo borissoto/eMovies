@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/_ArchitectCoders/eMovies/app/src/main/res/drawable/gradient.xml" value="0.25" />
         <entry key="..\:/_ArchitectCoders/eMovies/app/src/main/res/layout/activity_main.xml" value="0.28804347826086957" />
+        <entry key="..\:/_ArchitectCoders/eMovies/app/src/main/res/layout/fragment_detail.xml" value="0.25" />
+        <entry key="..\:/_ArchitectCoders/eMovies/app/src/main/res/layout/fragment_movie.xml" value="0.32653985507246375" />
       </map>
     </option>
   </component>
