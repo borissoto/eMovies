@@ -2,4 +2,8 @@
     <string name="app_name">eMovies</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="content_description_image">movie image</string>
+    <string name="recomendados_para_ti">Recomendados para ti</string>
+    <string name="tendencia">Tendencia</string>
+    <string name="proximos_estrenos">Proximos estrenos</string>
+    <string name="content_movie_item">movie item</string>
 </resources>

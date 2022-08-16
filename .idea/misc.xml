@@ -5,8 +5,12 @@
       <map>
         <entry key="..\:/_ArchitectCoders/eMovies/app/src/main/res/drawable/gradient.xml" value="0.25" />
         <entry key="..\:/_ArchitectCoders/eMovies/app/src/main/res/layout/activity_main.xml" value="0.28804347826086957" />
-        <entry key="..\:/_ArchitectCoders/eMovies/app/src/main/res/layout/fragment_detail.xml" value="0.25" />
+        <entry key="..\:/_ArchitectCoders/eMovies/app/src/main/res/layout/fragment_detail.xml" value="0.33" />
         <entry key="..\:/_ArchitectCoders/eMovies/app/src/main/res/layout/fragment_movie.xml" value="0.32653985507246375" />
+        <entry key="..\:/_ArchitectCoders/eMovies/app/src/main/res/layout/recommended_movies.xml" value="0.3009833262077811" />
+        <entry key="..\:/_ArchitectCoders/eMovies/app/src/main/res/layout/top_rated_movies.xml" value="0.3009833262077811" />
+        <entry key="..\:/_ArchitectCoders/eMovies/app/src/main/res/layout/upcoming_movie.xml" value="0.2304403591278324" />
+        <entry key="..\:/_ArchitectCoders/eMovies/app/src/main/res/layout/view_movie_item.xml" value="0.2304403591278324" />
       </map>
     </option>
   </component>
