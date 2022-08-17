@@ -6,4 +6,6 @@
     <string name="tendencia">Tendencia</string>
     <string name="proximos_estrenos">Próximos estrenos</string>
     <string name="content_movie_item">movie item</string>
+    <string name="description">DESCRIPCION</string>
+    <string name="appTitle">eMovie</string>
 </resources>

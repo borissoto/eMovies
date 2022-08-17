@@ -9,5 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="card_gray">#CCFFFFFF</color>
     <color name="card_yellow">#FFF6C700</color>
+    <color name="transparent">#11FFFFFF</color>
 
 </resources>

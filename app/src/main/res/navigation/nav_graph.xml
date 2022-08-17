@@ -18,5 +18,24 @@
         android:id="@+id/detailFragment"
         android:name="com.boris.emovies.ui.moviedetail.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="posterImageUrl"
+            app:argType="string" />
+        <argument
+            android:name="rating"
+            app:argType="float" />
+        <argument
+            android:name="overview"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="language"
+            app:argType="string" />
+        <argument
+            android:name="releaseDate"
+            app:argType="string" />
+    </fragment>
 </navigation>

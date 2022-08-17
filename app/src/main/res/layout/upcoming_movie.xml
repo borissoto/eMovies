@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/proximos_estrenos"
+        android:layout_marginStart="8dp"
         android:textSize="26sp"
         android:textColor="@color/white"/>
 
