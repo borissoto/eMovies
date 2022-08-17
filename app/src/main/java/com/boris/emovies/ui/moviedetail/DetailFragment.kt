@@ -1,12 +1,10 @@
-package com.boris.emovies
+package com.boris.emovies.ui.moviedetail
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import com.boris.emovies.R
 import com.boris.emovies.databinding.FragmentDetailBinding
-import com.boris.emovies.databinding.FragmentMovieBinding
 
 class DetailFragment : Fragment(R.layout.fragment_detail) {
 

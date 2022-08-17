@@ -1,7 +1,8 @@
-package com.boris.emovies
+package com.boris.emovies.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.boris.emovies.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -18,8 +18,8 @@
         android:id="@+id/rv_recommended_movies"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:spanCount="2"
         tools:listitem="@layout/view_movie_item"/>
 
