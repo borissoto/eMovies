@@ -1,6 +1,6 @@
 # eMovies
-![Movies List](https://github.com/emovies/movie-list.png)
-![Movie Detail](https://github.com/emovies/movie-detail.png)
+![Movies List](https://github.com/borissoto/blob/dev/eMovies/movie-list.png)
+![Movie Detail](https://github.com/borissoto/blob/dev/eMovies/movie-detail.png)
 
 
 Ejercicio Técnico La siguiente prueba está diseñada para evaluar su conocimiento y experiencia como desarrollador Android.
