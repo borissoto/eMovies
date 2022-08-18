@@ -3,7 +3,7 @@
 ![Movie Detail](https://github.com/borissoto/eMovies/blob/dev/movie-detail.png)
 
 
-##Ejercicio Técnico
+## Ejercicio Técnico
 
 La siguiente prueba está diseñada para evaluar su conocimiento y experiencia como desarrollador Android.
 Por favor tenga en cuenta lo siguiente:
@@ -21,7 +21,7 @@ filtrar por Idioma y Año de lanzamiento (a elección del candidato), se debe mo
 en forma de cuadrícula limitando a solo 6 películas
 - Visualizar detalle de la película seleccionada.
 
-##Puntos importantes:
+## Puntos importantes:
 
 1. Opción de ver trailer en el detalle (cómo visualizar el trailer queda a elección del
 candidato).
@@ -30,7 +30,7 @@ candidato).
 4. Uso de buenas prácticas y escalabilidad.
 5. Pruebas Unitarias.
 
-##Responda y escriba dentro de un archivo Readme las siguientes preguntas:
+## Responda y escriba dentro de un archivo Readme las siguientes preguntas:
 
 1. ¿En qué consiste el principio de responsabilidad única? ¿Cuál es su propósito?
 2. ¿Qué características tiene, según su opinión, un “buen” código o código limpio?
