@@ -4,7 +4,7 @@ import com.boris.emovies.data.model.MovieList
 import com.boris.emovies.repository.WebService
 import com.boris.emovies.utils.AppConstants
 
-class MovieDataSource(private val webService: WebService) {
+class RemoteMovieDataSource(private val webService: WebService) {
 
     suspend fun getUpcomingMovies(): MovieList {
         return webService.getUpcomingMovies(AppConstants.API_KEY)

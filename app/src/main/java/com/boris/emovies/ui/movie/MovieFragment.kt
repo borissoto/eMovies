@@ -4,15 +4,16 @@ import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.View
-import android.widget.AdapterView
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ConcatAdapter
 import com.boris.emovies.R
 import com.boris.emovies.core.Resource
+import com.boris.emovies.data.local.AppDatabase
+import com.boris.emovies.data.local.LocalMovieDataSource
 import com.boris.emovies.data.model.Movie
-import com.boris.emovies.data.remote.MovieDataSource
+import com.boris.emovies.data.remote.RemoteMovieDataSource
 import com.boris.emovies.databinding.FragmentMovieBinding
 import com.boris.emovies.presentation.MovieViewModel
 import com.boris.emovies.presentation.MovieViewModelFactory
@@ -30,7 +31,8 @@ class MovieFragment : Fragment(R.layout.fragment_movie), MovieAdapter.OnMovieCli
     private val viewModel by viewModels<MovieViewModel> {
         MovieViewModelFactory(
             MovieRepositoryImpl(
-                MovieDataSource(RetrofitClient.webService)
+                RemoteMovieDataSource(RetrofitClient.webService),
+                LocalMovieDataSource(AppDatabase.getDatabase(requireContext()).movieDao())
             )
         )
     }
