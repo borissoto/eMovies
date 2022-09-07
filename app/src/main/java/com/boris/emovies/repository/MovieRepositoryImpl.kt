@@ -32,4 +32,15 @@ class MovieRepositoryImpl(
             dataSourceLocal.getTopRatedMovies()
         }
     }
+
+    override suspend fun getPopularMovies(): MovieList {
+        return if (InternetCheck.isNetworAvailable()){
+            dataSourceRemote.getPopularMovies().results.forEach{
+                dataSourceLocal.saveMovie(it.toMovieEntity("popular"))
+            }
+            dataSourceLocal.getPopularMovies()
+        }else{
+            dataSourceLocal.getPopularMovies()
+        }
+    }
 }

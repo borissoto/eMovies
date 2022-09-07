@@ -15,6 +15,9 @@ interface WebService {
 
     @GET("movie/top_rated")
     suspend fun getTopRatedMovies(@Query("api_key") apiKey: String): MovieList
+
+    @GET("movie/popular")
+    suspend fun getPopularMovies(@Query("api_key") apiKey: String): MovieList
 }
 
 object RetrofitClient{

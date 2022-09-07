@@ -25,18 +25,28 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <RelativeLayout
-        android:id="@+id/progress_circular"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="@id/appbar"
-        android:visibility="gone">
+        app:layout_constraintTop_toTopOf="@id/appbar">
+
 
         <ProgressBar
+            android:id="@+id/progress_upcoming"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"/>
-
+            android:layout_marginTop="80dp"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"/>
+        <ProgressBar
+            android:id="@+id/progress_top_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="280dp"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/progress_upcoming"/>
     </RelativeLayout>
+
   <androidx.recyclerview.widget.RecyclerView
       android:id="@+id/rv_movies"
       android:layout_width="match_parent"

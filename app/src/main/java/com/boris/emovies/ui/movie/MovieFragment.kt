@@ -28,6 +28,7 @@ class MovieFragment : Fragment(R.layout.fragment_movie), MovieAdapter.OnMovieCli
 
     private lateinit var concatAdapter: ConcatAdapter
     private lateinit var binding: FragmentMovieBinding
+//    var repository = MovieRepositoryImpl(RemoteMovieDataSource(RetrofitClient.webService), LocalMovieDataSource(AppDatabase.getDatabase(requireContext()).movieDao()))
     private val viewModel by viewModels<MovieViewModel> {
         MovieViewModelFactory(
             MovieRepositoryImpl(
@@ -44,48 +45,52 @@ class MovieFragment : Fragment(R.layout.fragment_movie), MovieAdapter.OnMovieCli
 
         concatAdapter = ConcatAdapter()
 
-        viewModel.fetchMainViewMovies().observe(viewLifecycleOwner, Observer {
+        viewModel.upcoming.observe(viewLifecycleOwner, Observer {
             when (it) {
                 is Resource.Loading -> {
-                    binding.progressCircular.visibility = View.VISIBLE
+                    binding.progressUpcoming.visibility = View.VISIBLE
                 }
                 is Resource.Success -> {
-                    binding.progressCircular.visibility = View.GONE
+                    binding.progressUpcoming.visibility = View.GONE
                     concatAdapter.apply {
                         addAdapter(
                             0,
                             UpcomingConcatAdapter(
                                 MovieAdapter(
-                                    it.data.first.results,
-                                    this@MovieFragment
-                                )
-                            )
-                        )
-                        addAdapter(
-                            1,
-                            TopRatedConcatAdapter(
-                                MovieAdapter(
-                                    it.data.second.results,
-                                    this@MovieFragment
-                                )
-                            )
-                        )
-                        addAdapter(
-                            2,
-                            RecommendedConcatAdapter(
-                                MovieAdapter(
-                                    it.data.second.results,
-                                    this@MovieFragment
+                                    it.data, this@MovieFragment
                                 )
                             )
                         )
                     }
-
                     binding.rvMovies.adapter = concatAdapter
-
                 }
                 is Resource.Failure -> {
-                    binding.progressCircular.visibility = View.GONE
+                    binding.progressUpcoming.visibility = View.GONE
+                    Log.d("Livedata", "${it.exception}")
+                }
+            }
+        })
+
+        viewModel.topRated.observe(viewLifecycleOwner, Observer {
+            when(it){
+                is Resource.Loading -> {
+                    binding.progressTopBar.visibility = View.VISIBLE
+                }
+                is Resource.Success -> {
+                    binding.progressTopBar.visibility = View.GONE
+                    concatAdapter.apply {
+                        addAdapter(
+                            TopRatedConcatAdapter(
+                                MovieAdapter(
+                                    it.data, this@MovieFragment
+                                )
+                            )
+                        )
+                    }
+                    binding.rvMovies.adapter = concatAdapter
+                }
+                is Resource.Failure -> {
+                    binding.progressTopBar.visibility = View.GONE
                     Log.d("Livedata", "${it.exception}")
                 }
             }
